@@ -7,3 +7,7 @@
 2. execute `npm login --scope=@uzh-bf --registry=https://npm.pkg.github.com` in your command line and enter your username and your personal token as password. You can generate a new token [here](https://github.com/settings/tokens)
 3. install the package
 4. use the component with `import {EasyFormsEmbed} from "@uzh-bf/easyformsembed"`
+
+## Alternative: Install directly from GitHub
+
+npm install https://github.com/uzh-bf/easy-forms-embed
