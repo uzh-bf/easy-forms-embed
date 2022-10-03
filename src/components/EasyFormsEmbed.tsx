@@ -17,13 +17,18 @@ interface Props {
   formUrl: URL,
 
   /**
+   * A key for the container, otherwise only 1 is possible
+   */
+  key: string,
+  
+  /**
    * Any info you want to have prefilled as an Object and formated like {text_1: "value", text_2: "value"}
    */
   prefillInfo?: PrefillInfo
 }
 
 
-const EasyFormsEmbed:FC<Props> = ({formUrl, prefillInfo}) => {
+const EasyFormsEmbed:FC<Props> = ({formUrl, prefillInfo, key}) => {
   //regex to get ID of form from form link
   let regex = new RegExp('id=.*')
   let match = regex.exec(formUrl.toString())
@@ -42,7 +47,7 @@ const EasyFormsEmbed:FC<Props> = ({formUrl, prefillInfo}) => {
       // ID of the form
       id: formUrlId,
       theme: 0,
-      container: 'c7',
+      container: key,
       height: '479px',
       form:
         '//' + appPathUrl + 'index.php?r=app%2Fembed',
@@ -68,7 +73,7 @@ const EasyFormsEmbed:FC<Props> = ({formUrl, prefillInfo}) => {
   })
 
   return (
-    <div id="c7">
+    <div id={key}>
       Fill in the{' '}
       <a href={formUrl.href}>
         online form
