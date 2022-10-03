@@ -1,7 +1,7 @@
 {
   "name": "@uzh-bf/easyformsembed",
   "repository": "https://github.com/uzh-bf/easy-forms-embed",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Quick way to embed an EasyForm within react",
   "private": false,
   "main": "dist/index.js",
@@ -19,8 +19,8 @@
   "author": "UZH Executive Education",
   "license": "MIT",
   "peerDependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0"
   },
   "scripts": {
     "start": "rollup -c -w",
