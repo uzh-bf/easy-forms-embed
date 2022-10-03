@@ -7,11 +7,12 @@ function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'defau
 var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
 
 var EasyFormsEmbed = function (_a) {
-    var formUrl = _a.formUrl, prefillInfo = _a.prefillInfo, key = _a.key;
+    var formUrl = _a.formUrl, prefillInfo = _a.prefillInfo;
     //regex to get ID of form from form link
     var regex = new RegExp('id=.*');
     var match = regex.exec(formUrl.toString());
     var formUrlId = match[0].slice(3);
+    var key = "form_".concat(Math.floor(Math.random() * 1000));
     //regex to get appPathUrl from form link
     var appPathUrlRegex = new RegExp('www..*/index.php');
     var appPathUrlMatch = appPathUrlRegex.exec(formUrl.toString());

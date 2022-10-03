@@ -17,22 +17,18 @@ interface Props {
   formUrl: URL,
 
   /**
-   * A key for the container, otherwise only 1 is possible
-   */
-  key: string,
-  
-  /**
    * Any info you want to have prefilled as an Object and formated like {text_1: "value", text_2: "value"}
    */
   prefillInfo?: PrefillInfo
 }
 
 
-const EasyFormsEmbed:FC<Props> = ({formUrl, prefillInfo, key}) => {
+const EasyFormsEmbed:FC<Props> = ({formUrl, prefillInfo}) => {
   //regex to get ID of form from form link
   let regex = new RegExp('id=.*')
   let match = regex.exec(formUrl.toString())
   const formUrlId = match![0].slice(3)
+  const key = `form_${Math.floor(Math.random() * 1000)}`
 
   //regex to get appPathUrl from form link
   let appPathUrlRegex: RegExp = new RegExp('www..*/index.php')
