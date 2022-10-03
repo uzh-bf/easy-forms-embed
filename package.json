@@ -1,7 +1,7 @@
 {
   "name": "@uzh-bf/easyformsembed",
   "repository": "https://github.com/uzh-bf/easy-forms-embed",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Quick way to embed an EasyForm within react",
   "private": false,
   "main": "dist/index.js",
