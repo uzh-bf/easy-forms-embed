@@ -7,7 +7,7 @@ function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'defau
 var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
 
 var EasyFormsEmbed = function (_a) {
-    var formUrl = _a.formUrl, prefillInfo = _a.prefillInfo;
+    var formUrl = _a.formUrl, prefillInfo = _a.prefillInfo, key = _a.key;
     //regex to get ID of form from form link
     var regex = new RegExp('id=.*');
     var match = regex.exec(formUrl.toString());
@@ -23,7 +23,7 @@ var EasyFormsEmbed = function (_a) {
             // ID of the form
             id: formUrlId,
             theme: 0,
-            container: 'c7',
+            container: key,
             height: '479px',
             form: '//' + appPathUrl + 'index.php?r=app%2Fembed',
             defaultValues: prefillInfoData,
@@ -48,7 +48,7 @@ var EasyFormsEmbed = function (_a) {
         var par = scr.parentNode;
         par.insertBefore(scriptElement, scr);
     });
-    return (React__default["default"].createElement("div", { id: "c7" },
+    return (React__default["default"].createElement("div", { id: key },
         "Fill in the",
         ' ',
         React__default["default"].createElement("a", { href: formUrl.href }, "online form")));
