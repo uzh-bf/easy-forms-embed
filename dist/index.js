@@ -23,7 +23,6 @@ var EasyFormsEmbed = function (_a) {
         var options = {
             // ID of the form
             id: formUrlId,
-            theme: 0,
             container: key,
             height: '479px',
             form: '//' + appPathUrl + 'index.php?r=app%2Fembed',

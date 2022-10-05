@@ -42,7 +42,6 @@ const EasyFormsEmbed:FC<Props> = ({formUrl, prefillInfo}) => {
     const options = {
       // ID of the form
       id: formUrlId,
-      theme: 0,
       container: key,
       height: '479px',
       form:
